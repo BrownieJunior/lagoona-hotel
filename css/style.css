@@ -508,13 +508,15 @@ body {
 }
 
 .link-container {
-  background: url("../img/placement/any_options.png") no-repeat;
-  background-size: cover;
   position: relative;
-  border-radius: 0 0 15px 15px;
 }
 
 .placement__link-content {
+  background: url("../img/placement/any_options.png") no-repeat;
+  background-size: cover;
+  margin-right: calc(var(--bs-gutter-x) * 0.5);
+  margin-left: calc(var(--bs-gutter-x) * 0.5);
+  border-radius: 0 0 15px 15px;
   position: absolute;
   top: 0;
   left: 0;
@@ -530,13 +532,29 @@ body {
   color: #ffffff;
 }
 
+.placement__link-content:focus-visible {
+  color: #cc9933;
+  transition: color 0.3s ease-in-out;
+}
 .placement__link-content:hover {
   color: #cc9933;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 .placement__link-content:active {
   color: #a47312;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.placement__link-content:focus-visible .link-arrow path {
+  stroke: #cc9933;
+  transition: stroke 0.3s ease-in-out;
+}
+.placement__link-content:hover .link-arrow path {
+  stroke: #cc9933;
+  transition: stroke 0.3s ease-in-out;
+}
+.placement__link-content:active .link-arrow path {
+  stroke: #a47312;
+  transition: stroke 0.3s ease-in-out;
 }
 
 .link-arrow {
